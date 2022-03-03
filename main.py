@@ -1,5 +1,6 @@
 from application import salary
 from db import people
+from datetime import datetime
 
 
 
@@ -10,6 +11,7 @@ def main():
         print('Start -> main()')
         print(salary.calculate_salary())
         print(people.get_employees())
+        print(datetime.now())
 
 
 
