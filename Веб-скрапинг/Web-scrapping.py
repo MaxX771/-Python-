@@ -30,7 +30,8 @@ for article in articles:
     habs = set(hab.text.strip() for hab in habs)
     for hab in habs:
         if hab in HABSS:
-            title = article.find(class_='tm-article-snippet__title-link').attrs['href']
+            title = article.find(class_='tm-article-snippet__title-link').attrs['href']     #  вывод формата <сегодня в <ВРЕМЯ>>
+            # time = article.find(class_='tm-article-snippet__datetime-published').find('time').attrs['title']   #  вывод формата <ГГГГ-ММ-ДД>
             time = article.find(class_='tm-article-snippet__datetime-published').text
             url_ = url + title
             result = f'<{time}> - {header} - <{url_}>'
