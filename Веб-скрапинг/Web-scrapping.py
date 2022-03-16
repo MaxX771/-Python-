@@ -28,7 +28,6 @@ for article in articles:
     habs = article.find_all(class_='tm-article-snippet__hubs-item')
     header = article.find(class_='tm-article-snippet__title tm-article-snippet__title_h2').text
     habs = set(hab.text.strip() for hab in habs)
-    # print(habs)
     for hab in habs:
         if hab in HABSS:
             title = article.find(class_='tm-article-snippet__title-link').attrs['href']
